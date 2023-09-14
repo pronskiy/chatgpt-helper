@@ -1,0 +1,26 @@
+{
+  "name": "ChatGPT Helper",
+  "version": "0.1",
+  "description": "",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "css": [],
+      "js": ["content-script.js"]
+    }
+  ],
+  "commands": {
+    "new-tab": {
+      "suggested_key": {
+        "default": "Alt+G",
+        "mac": "Command+Shift+P",
+        "linux": "Alt+G"
+      },
+      "description": "Switch to a new ChatGPT tab from any application."
+    }
+  }
+}
