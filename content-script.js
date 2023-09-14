@@ -32,7 +32,7 @@ function addPromptOnPage(prompt) {
     const prompt_textarea = document.getElementById("prompt-textarea")
     setNativeValue(prompt_textarea, prompt)
     prompt_textarea.dispatchEvent(new Event('input', { bubbles: true }))
-    prompt_textarea.nextSibling.click()
+    prompt_textarea.parentNode.querySelector('button').click()
 }
 
 async function renderPrompt(prompt) {
