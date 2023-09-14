@@ -24,7 +24,7 @@ chrome.runtime.onMessage.addListener(
 
         setTimeout(async () => {
             addPromptOnPage(await renderPrompt(message.prompt))
-        }, 1000);
+        }, 500);
     }
 )
 

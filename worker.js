@@ -5,7 +5,7 @@ chrome.commands.onCommand.addListener(async command => {
     const new_tab = await chrome.tabs.create({
         url: 'https://chat.openai.com/'
     });
-    await sleep(1000);
+    await sleep(1500);
     await chrome.tabs.sendMessage(
         new_tab.id, 
         {prompt: 'proofread'},
