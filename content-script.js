@@ -1,9 +1,11 @@
 console.log('content-script.js');
 
 const PROMPTS = {
-    proofread: `Proofread: 
+    proofread: `Fix grammar: 
     
-$CLIPBOARD$`,
+"
+$CLIPBOARD$
+"`,
 }
 
 String.prototype.mapReplace = function(map) {
